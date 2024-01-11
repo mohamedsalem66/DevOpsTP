@@ -73,16 +73,6 @@ public class MembreController {
 		memberService.deleteMember(id);
 	}
 	
-	@GetMapping("/fullmember/{id}")
-	public Membre findAFullMember(@PathVariable(name="id") Long id)
-	{
-
-	Membre mbr=memberService.findMember(id);
-	mbr.setPubs(memberService.findPublicationparauteur(id));
-	mbr.setOutils(memberService.findOutilparauteur(id));
-   mbr.setEvnts(memberService.findEvenementparauteur(id));
-
-	return mbr;
-	}
+	
 
 }
