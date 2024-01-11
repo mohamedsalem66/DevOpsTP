@@ -36,9 +36,6 @@ public class MembreServiceApplication implements CommandLineRunner {
 	EnseignantChercheurRepository enseignantChercheurRepository;
 	MembreRepository membreRepository;
 	IMembreService iMembreService;
-	PublicationProxyService publicationProxyService;
-	OutilProxyService outilProxyService;
-	EvenementProxyService evenementProxyService;
 
 	public static void main(String[] args) {
 		SpringApplication.run(MembreServiceApplication.class, args);
@@ -117,30 +114,8 @@ public class MembreServiceApplication implements CommandLineRunner {
 		
 		}
 		
-		PublicationBean pub1 = publicationProxyService.findPublicationById(1L);
-		PublicationBean pub2 = publicationProxyService.findPublicationById(2L);
 		
-		OutilBean outil1 = outilProxyService.findOutilById(1L);
-		OutilBean outil2 = outilProxyService.findOutilById(2L);
-		
-		EvenementBean evnt1 = evenementProxyService.findOutilById(1L);
-		EvenementBean evnt2 = evenementProxyService.findOutilById(2L);
-
-		
-		iMembreService.affecterauteurTopublication(ens1.getId(), pub1.getId() );
-		iMembreService.affecterauteurTopublication(etd1.getId(), pub2.getId() );
-		
-		iMembreService.affecterauteurToOutil(ens1.getId(), outil1.getId() );
-		iMembreService.affecterauteurToOutil(etd1.getId(), outil2.getId() );
-		
-		iMembreService.affecterauteurToEvenement(ens1.getId(), evnt1.getId() );
-		iMembreService.affecterauteurToEvenement(etd1.getId(), evnt2.getId() );
 	
-		
-		enseignantChercheurRepository.save(ens2);
-		
-		etudiantRepository.save(etd1);
-
 	}
 	
 	
