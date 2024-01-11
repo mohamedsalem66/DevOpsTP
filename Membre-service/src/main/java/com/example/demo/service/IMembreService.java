@@ -40,16 +40,6 @@ public interface IMembreService {
 
 	public List<Etudiant> getEtudiantsByEns(Long idEns);
 
-	public void affecterauteurTopublication(Long idauteur, Long idpub);
-
-	public List<PublicationBean> findPublicationparauteur(Long idauteur);
 	
-	public void affecterauteurToOutil(Long idauteur, Long idpub);
-
-	public List<OutilBean> findOutilparauteur(Long idauteur);
-	
-	public void affecterauteurToEvenement(Long idauteur, Long idevt);
-
-	public List<EvenementBean> findEvenementparauteur(Long idauteur);
 
 }
