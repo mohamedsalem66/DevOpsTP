@@ -1,5 +1,6 @@
 # Use a base image with OpenJDK 17
-FROM adoptopenjdk:17-jre-hotspot
+FROM openjdk:17-jdk-slim
+
 
 # Set the working directory
 WORKDIR /app
