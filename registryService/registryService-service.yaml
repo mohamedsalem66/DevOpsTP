@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: registryservice-deployment
+  namespace: devopstp  
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: registryservice
+  template:
+    metadata:
+      labels:
+        app: registryservice
+    spec:
+      containers:
+      - name: registryservice
+        image: mohamedsalem66/laboratoire:registryService-latest  # Use your actual image name and tag
+        ports:
+        - containerPort: 8080 
