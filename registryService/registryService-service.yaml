@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: registryservice
-        image: mohamedsalem66/laboratoire:registryService-latest  # Use your actual image name and tag
+        image: mohamedsalem66/laboratoire:registryService-latest  
         ports:
         - containerPort: 8080 
