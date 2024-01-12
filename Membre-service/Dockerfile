@@ -5,10 +5,10 @@ FROM adoptopenjdk:17-jre-hotspot
 WORKDIR /app
 
 # Copy the JAR file into the container
-COPY target/registryService-0.0.1-SNAPSHOT.jar app.jar
+COPY target/Membre-service-0.0.1-SNAPSHOT.jar app.jar
 
 # Expose the port used by the application
-EXPOSE 8088
+EXPOSE 8083
 
 # Command to run the application
 CMD ["java", "-jar", "app.jar"]
