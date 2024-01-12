@@ -8,7 +8,7 @@ WORKDIR /app
 COPY target/registryService-0.0.1-SNAPSHOT.jar app.jar
 
 # Expose the port used by the application
-EXPOSE 8088
+EXPOSE 8080
 
 # Command to run the application
 CMD ["java", "-jar", "app.jar"]
