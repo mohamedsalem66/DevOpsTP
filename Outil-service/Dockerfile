@@ -8,7 +8,7 @@ WORKDIR /app
 COPY target/Outil-service-0.0.1-SNAPSHOT.jar app.jar
 
 # Expose the port used by the application
-EXPOSE 8084
+EXPOSE 8083
 
 # Command to run the application
 CMD ["java", "-jar", "app.jar"]
