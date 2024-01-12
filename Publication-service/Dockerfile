@@ -5,7 +5,7 @@ FROM openjdk:17-jdk-slim
 WORKDIR /app
 
 # Copy the JAR file into the container
-COPY target/Gateway-service-0.0.1-SNAPSHOT.jar app.jar
+COPY target/Publication-service-0.0.1-SNAPSHOT.jar app.jar
 
 # Expose the port used by the application
 EXPOSE 8084
